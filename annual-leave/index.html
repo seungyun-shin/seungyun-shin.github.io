@@ -1,0 +1,119 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>연차 계산기 2026 — 입사일·회계연도 기준, 퇴사 정산, 연차수당 | 근거 계산기</title>
+<meta name="description" content="입사일만 넣으면 연차 발생일과 일수를 근로기준법 제60조 근거와 함께 보여줍니다. 1년 미만 월차, 3년 이상 가산, 회계연도 기준 퇴사 정산, 연차수당까지 계산합니다.">
+<link rel="canonical" href="https://seungyun-shin.github.io/annual-leave/">
+
+<meta property="og:type" content="website">
+<meta property="og:locale" content="ko_KR">
+<meta property="og:site_name" content="근거 계산기">
+<meta property="og:title" content="연차 계산기 2026 — 입사일·회계연도 기준, 퇴사 정산, 연차수당 | 근거 계산기">
+<meta property="og:description" content="입사일만 넣으면 연차 발생일과 일수를 근로기준법 제60조 근거와 함께 보여줍니다. 1년 미만 월차, 3년 이상 가산, 회계연도 기준 퇴사 정산, 연차수당까지 계산합니다.">
+<meta property="og:url" content="https://seungyun-shin.github.io/annual-leave/">
+<meta property="og:image" content="https://seungyun-shin.github.io/assets/og.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="theme-color" content="#1f5eff">
+<link rel="icon" href="/assets/favicon.svg" type="image/svg+xml">
+<link rel="stylesheet" href="/assets/style.css">
+<!-- ADSENSE: 승인 후 이 위치에 애드센스 스크립트를 넣는다 (site.config.js adsEnabled=true) -->
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"WebApplication","name":"연차 계산기 (입사일·회계연도 기준)","url":"https://seungyun-shin.github.io/annual-leave/","description":"입사일만 넣으면 연차 발생일과 일수를 근로기준법 제60조 근거와 함께 보여줍니다. 1년 미만 월차, 3년 이상 가산, 회계연도 기준 퇴사 정산, 연차수당까지 계산합니다.","applicationCategory":"FinanceApplication","operatingSystem":"Any","inLanguage":"ko-KR","isAccessibleForFree":true,"offers":{"@type":"Offer","price":"0","priceCurrency":"KRW"},"dateModified":"2026-10-25","publisher":{"@type":"Organization","name":"근거 계산기","url":"https://seungyun-shin.github.io/"}}</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"입사 1년 미만이면 연차가 며칠인가요?","acceptedAnswer":{"@type":"Answer","text":"1개월을 개근할 때마다 1일씩 생겨 최대 11일입니다(근로기준법 제60조②). 이 휴가는 입사일로부터 1년이 지나면 사용할 수 없으므로 그 전에 쓰거나, 쓰지 못하면 수당으로 받습니다(사용촉진이 없었던 경우)."}},{"@type":"Question","name":"딱 1년 일하고 퇴사하면 연차 15일을 받을 수 있나요?","acceptedAnswer":{"@type":"Answer","text":"1년을 채운 다음 날에도 근로관계가 있어야 15일이 생깁니다. 2025년 1월 1일 입사자가 2025년 12월 31일까지 근무하고 퇴사하면 11일, 2026년 1월 1일까지 근무하면 26일(11+15)입니다. 대법원 2021다227100 판결과 2021년 12월 고용노동부 행정해석 변경에 따른 결과입니다."}},{"@type":"Question","name":"회계연도 기준으로 연차를 받는데, 퇴사할 때 손해를 보나요?","acceptedAnswer":{"@type":"Answer","text":"퇴직 시점에 회계연도 기준으로 받은 총 연차가 입사일 기준으로 계산한 총 연차보다 적다면, 그 부족한 일수만큼 연차수당으로 정산받아야 합니다(고용노동부 지침). 위 계산기에서 '퇴사'와 '회계연도 기준'을 선택하면 부족분을 보여줍니다."}},{"@type":"Question","name":"연차수당은 어떻게 계산하나요?","acceptedAnswer":{"@type":"Answer","text":"미사용 연차 일수 × 1일 통상임금입니다. 주 40시간 근무자는 월 통상임금 ÷ 209 × 8로 1일 통상임금을 구합니다. 통상임금에는 기본급과 정기·일률적으로 지급되는 고정수당이 들어가고, 실적에 따라 달라지는 성과급 등은 보통 제외됩니다."}},{"@type":"Question","name":"3년 차부터 연차가 늘어나나요?","acceptedAnswer":{"@type":"Answer","text":"계속근로 3년이 되는 시점부터 최초 1년을 넘는 근속기간 2년마다 1일이 더해집니다. 근속 1·2년 15일, 3·4년 16일, 5·6년 17일이며 21년 이상은 최대 25일입니다."}},{"@type":"Question","name":"5인 미만 회사나 아르바이트도 연차가 있나요?","acceptedAnswer":{"@type":"Answer","text":"상시 근로자 4인 이하 사업장에는 연차 규정(제60조)이 적용되지 않습니다. 주 15시간 미만으로 일하는 초단시간 근로자도 연차가 없습니다. 주 15시간 이상 단시간 근로자는 통상 근로자 연차일수 × (본인 소정근로시간 ÷ 통상 근로자 소정근로시간) × 8시간으로 시간 단위 연차가 생깁니다."}},{"@type":"Question","name":"육아휴직이나 출산휴가 기간은 출근율에서 빠지나요?","acceptedAnswer":{"@type":"Answer","text":"아닙니다. 업무상 부상·질병으로 휴업한 기간, 출산전후휴가 기간, 육아휴직 기간은 출근한 것으로 봅니다(제60조⑥). 그래서 이런 기간이 있어도 출근율 80% 판단에서 불리하지 않습니다."}}]}</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"홈","item":"https://seungyun-shin.github.io/"},{"@type":"ListItem","position":2,"name":"연차 계산기 (입사일·회계연도 기준)","item":"https://seungyun-shin.github.io/annual-leave/"}]}</script>
+</head>
+<body>
+<a class="skip" href="#main">본문 바로가기</a>
+<header class="site-header">
+  <div class="wrap header-inner">
+    <a class="brand" href="/">근거 계산기</a>
+    <details class="nav-toggle">
+      <summary aria-label="계산기 메뉴">메뉴</summary>
+      <nav class="nav" aria-label="계산기 목록"><a href="/annual-leave/" aria-current="page">연차 계산기</a><a href="/social-insurance/">4대보험 계산기</a><a href="/take-home-pay/">연봉 실수령액</a><a href="/severance-pay/">퇴직금 계산기</a><a href="/parental-leave/">육아휴직급여</a><a href="/gift-tax/">증여세 계산기</a><a href="/year-end-tax/">연말정산 계산기</a><a href="/housing-score/">청약가점 계산기</a><a href="/maternity-leave/">출산휴가급여</a><a href="/inheritance-tax/">상속세 계산기</a><a href="/unemployment-benefit/">실업급여 계산기</a></nav>
+    </details>
+  </div>
+</header>
+<main id="main" class="wrap">
+
+<nav class="breadcrumb" aria-label="경로"><a href="/">홈</a> › <span>연차 계산기 (입사일·회계연도 기준)</span></nav>
+<h1>연차 계산기 (입사일·회계연도 기준)</h1>
+<p class="badges"><span class="badge">2026년 10월 기준 · 근로기준법 제60조</span></p>
+<p class="lead">입사일과 기준일(또는 마지막 근무일)을 넣으면 언제, 왜, 며칠의 연차가 생겼는지 날짜별로 보여줍니다. 회사가 회계연도 기준으로 연차를 주는 경우 퇴사할 때 받아야 할 정산 일수도 계산합니다.</p>
+
+<section class="card calc" aria-labelledby="calc-title">
+  <h2 id="calc-title" class="sr-only">계산 입력</h2>
+  <noscript><p class="note">이 계산기는 브라우저의 자바스크립트로 계산합니다. 자바스크립트를 켜 주세요.</p></noscript>
+  <form id="calc-form" novalidate autocomplete="off">
+<div class="field" role="radiogroup" aria-labelledby="status-lbl"><span class="label" id="status-lbl">재직 상태</span><div class="seg"><label><input type="radio" name="status" value="employed"><span>재직 중</span></label><label><input type="radio" name="status" value="retire"><span>퇴사(예정)</span></label></div></div>
+<div class="row row-2"><div class="field"><label for="hireDate">입사일</label><input type="date" id="hireDate" name="hireDate" required><span class="hint">첫 출근일</span></div><div class="field"><label for="endDate" id="endDate-label">계산 기준일</label><input type="date" id="endDate" name="endDate" required><span class="hint">퇴사라면 마지막으로 근무한 날(퇴직일 전날)</span></div></div>
+<div class="field" role="radiogroup" aria-labelledby="basis-lbl"><span class="label" id="basis-lbl">회사의 연차 부여 기준</span><div class="seg"><label><input type="radio" name="basis" value="hire"><span>입사일 기준</span></label><label><input type="radio" name="basis" value="fiscal"><span>회계연도 기준</span></label></div><span class="hint">모르면 근로계약서·취업규칙을 확인하세요. 1월 1일에 모두 함께 연차가 생긴다면 회계연도 기준입니다.</span></div>
+<div id="fy-wrap" hidden><div class="field"><label for="fyStartMonth">회계연도 시작</label><select id="fyStartMonth" name="fyStartMonth"><option value="1">1월 1일 시작</option><option value="2">2월 1일 시작</option><option value="3">3월 1일 시작</option><option value="4">4월 1일 시작</option><option value="5">5월 1일 시작</option><option value="6">6월 1일 시작</option><option value="7">7월 1일 시작</option><option value="8">8월 1일 시작</option><option value="9">9월 1일 시작</option><option value="10">10월 1일 시작</option><option value="11">11월 1일 시작</option><option value="12">12월 1일 시작</option></select></div></div>
+<div class="row row-2"><div class="field"><label for="monthlyOrdinaryWage">월 통상임금 (선택)</label><div class="input-unit"><input type="text" id="monthlyOrdinaryWage" name="monthlyOrdinaryWage" data-money placeholder=""><span class="unit">원</span></div><span class="hint">기본급 + 고정수당. 연차수당 계산용</span></div><div class="field"><label for="unusedDays">미사용 연차 (선택)</label><div class="input-unit"><input type="number" id="unusedDays" name="unusedDays" inputmode="decimal" min="0" step="0.5"><span class="unit">일</span></div><span class="hint">수당으로 받을 남은 일수</span></div></div>
+<details class="basis"><summary>근로시간이 주 40시간이 아니라면</summary><div class="row row-2"><div class="field"><label for="monthlyHours">월 소정근로시간</label><div class="input-unit"><input type="number" id="monthlyHours" name="monthlyHours" inputmode="decimal" min="0" step="1"><span class="unit">시간</span></div><span class="hint">주 40시간 + 주휴 = 209시간</span></div><div class="field"><label for="dailyHours">1일 소정근로시간</label><div class="input-unit"><input type="number" id="dailyHours" name="dailyHours" inputmode="decimal" min="0" step="0.5"><span class="unit">시간</span></div></div></div></details>
+    <div class="actions"><button type="submit" class="btn">계산하기</button><button type="button" class="btn btn-ghost" id="btn-reset">초기화</button></div>
+  </form>
+</section>
+<section id="result" class="card result" aria-live="polite" hidden></section>
+<!-- AD SLOT: annual-leave-after-result (애드센스 승인 후 광고 코드 삽입) -->
+<div class="ad-slot" data-ad-slot="annual-leave-after-result" aria-hidden="true"></div>
+<section class="content">
+
+<h2>연차는 이렇게 생깁니다</h2>
+<ol>
+  <li><strong>입사 후 1년 미만</strong>: 1개월 개근할 때마다 1일, 최대 11일 (근로기준법 제60조②). 이 휴가는 입사일로부터 1년 안에 써야 합니다.</li>
+  <li><strong>1년간 80% 이상 출근</strong>: 15일 (제60조①). 1년 미만 기간의 월차 11일과는 별개입니다. 2018년 5월 29일 시행된 개정법(2017년 5월 30일 이후 입사자 적용)부터 1년 차에 쓴 월차를 15일에서 빼지 않아, 입사 후 2년 동안 최대 26일이 생깁니다. 1년 미만 월차는 2020년 3월 31일 개정으로 입사 1년이 지나면 소멸합니다.</li>
+  <li><strong>3년 이상 근속</strong>: 최초 1년을 넘는 근속기간 2년마다 1일 가산, 한도 25일 (제60조④).</li>
+</ol>
+<div class="formula">
+연차 일수(근속 k년) = min(25, 15 + ⌊(k − 1) ÷ 2⌋)<br>
+예) 1·2년 15일 → 3·4년 16일 → 5·6년 17일 → … → 21년 이상 25일
+</div>
+<h3>발생일과 '1년 + 1일' 문제</h3>
+<p>연차는 1년(또는 1개월)을 다 채운 <strong>다음 날</strong>에 근로관계가 있어야 생깁니다. 대법원(2021다227100)은 1년 기간제 근로자에게 15일이 생기지 않는다고 봤고, 고용노동부도 2021년 12월 행정해석을 바꿨습니다. 그래서 2025년 1월 1일 입사자가 2025년 12월 31일까지 일하고 그만두면 11일, 2026년 1월 1일까지 일하면 11일 + 15일 = 26일입니다.</p>
+<h3>회계연도 기준과 퇴사 정산</h3>
+<p>많은 회사가 관리 편의를 위해 1월 1일에 전 직원의 연차를 한꺼번에 줍니다. 이때 입사연도에 일한 날수만큼 비례 연차(15일 × 입사연도 재직일수 ÷ 그 회계연도 일수, 평년 365일·윤년 366일)를 다음 해 1월 1일에 주고, 그다음 해부터는 근속연수에 따라 15일, 16일…을 줍니다. 고용노동부는 이 방식을 허용하되, <strong>퇴직할 때 입사일 기준으로 계산한 일수보다 적으면 그 차이를 수당으로 정산</strong>하도록 하고 있습니다. 이 계산기는 두 기준의 누적 일수를 나란히 보여주고 부족분을 계산합니다.</p>
+<p class="small muted">행정해석 예시는 분모를 365일로 적지만, 이 계산기는 윤년(예: 2024년 입사)에는 그해 일수 366일로 나눕니다(1월 1일 입사자가 입사일 기준과 같은 15일을 받도록). 차이는 0.02일 정도입니다. 비례 연차의 소수점(예: 7.56일)은 법에 처리 방법이 정해져 있지 않습니다. 실무에서는 0.5일 또는 1일 단위로 올려 부여하거나 수당으로 지급하는 경우가 많습니다. 이 계산기는 소수점 둘째 자리까지 그대로 보여줍니다.</p>
+<h3>연차수당</h3>
+<div class="formula">
+연차수당 = 미사용 연차 일수 × 1일 통상임금<br>
+1일 통상임금 = 월 통상임금 ÷ 209시간 × 8시간 (주 40시간 근무 기준)
+</div>
+<p>예) 월 통상임금 2,090,000원, 미사용 5일 → 1일 통상임금 80,000원 × 5일 = 400,000원(세전). 사용자가 근로기준법 제61조의 사용촉진 절차를 제대로 밟았다면 미사용 연차에 대한 수당 지급 의무가 면제될 수 있습니다.</p>
+<h3>이 계산기가 다루지 않는 경우</h3>
+<ul>
+  <li>상시 근로자 5인 미만 사업장: 제60조가 적용되지 않습니다 (근로기준법 시행령 별표 1).</li>
+  <li>주 15시간 미만 초단시간 근로자: 연차가 없습니다 (제18조③). 주 15시간 이상 단시간 근로자는 시간 단위로 비례 산정합니다 (시행령 별표 2).</li>
+  <li>출근율이 80% 미만인 해: 그해에는 개근한 달마다 1일이 생깁니다. 출근율 계산 시 업무상 재해 휴업, 출산전후휴가, 육아휴직 기간은 출근한 것으로 봅니다 (제60조⑥).</li>
+</ul>
+<h2>근거 법령·자료</h2>
+<ul class="laws"><li><a href="https://www.law.go.kr/법령/근로기준법/제60조" target="_blank" rel="noopener">근로기준법 제60조 (연차 유급휴가)</a></li><li><a href="https://www.law.go.kr/법령/근로기준법/제61조" target="_blank" rel="noopener">근로기준법 제61조 (연차 유급휴가의 사용 촉진)</a></li><li><a href="https://www.law.go.kr/법령/근로기준법/제18조" target="_blank" rel="noopener">근로기준법 제18조 (단시간근로자의 근로조건)</a></li><li><a href="https://www.law.go.kr/법령/근로기준법시행령" target="_blank" rel="noopener">근로기준법 시행령 별표 1·2 (적용 범위, 단시간근로자)</a></li><li><a href="https://www.law.go.kr/판례/(2021다227100)" target="_blank" rel="noopener">대법원 2021. 10. 14. 선고 2021다227100 판결</a> — 1년 기간제 근로자의 연차 15일 불발생</li><li><a href="https://www.law.go.kr/법령/민법/제160조" target="_blank" rel="noopener">민법 제157조·제160조 (기간의 계산)</a> — 월 단위 기간 만료일 계산</li></ul>
+<!-- AD SLOT: annual-leave-mid (애드센스 승인 후 광고 코드 삽입) -->
+<div class="ad-slot" data-ad-slot="annual-leave-mid" aria-hidden="true"></div>
+<h2>자주 묻는 질문</h2>
+<div class="faq"><details class="faq-item"><summary>입사 1년 미만이면 연차가 며칠인가요?</summary><div class="faq-a">1개월을 개근할 때마다 1일씩 생겨 최대 11일입니다(근로기준법 제60조②). 이 휴가는 입사일로부터 1년이 지나면 사용할 수 없으므로 그 전에 쓰거나, 쓰지 못하면 수당으로 받습니다(사용촉진이 없었던 경우).</div></details>
+<details class="faq-item"><summary>딱 1년 일하고 퇴사하면 연차 15일을 받을 수 있나요?</summary><div class="faq-a">1년을 채운 다음 날에도 근로관계가 있어야 15일이 생깁니다. 2025년 1월 1일 입사자가 2025년 12월 31일까지 근무하고 퇴사하면 11일, 2026년 1월 1일까지 근무하면 26일(11+15)입니다. 대법원 2021다227100 판결과 2021년 12월 고용노동부 행정해석 변경에 따른 결과입니다.</div></details>
+<details class="faq-item"><summary>회계연도 기준으로 연차를 받는데, 퇴사할 때 손해를 보나요?</summary><div class="faq-a">퇴직 시점에 회계연도 기준으로 받은 총 연차가 입사일 기준으로 계산한 총 연차보다 적다면, 그 부족한 일수만큼 연차수당으로 정산받아야 합니다(고용노동부 지침). 위 계산기에서 '퇴사'와 '회계연도 기준'을 선택하면 부족분을 보여줍니다.</div></details>
+<details class="faq-item"><summary>연차수당은 어떻게 계산하나요?</summary><div class="faq-a">미사용 연차 일수 × 1일 통상임금입니다. 주 40시간 근무자는 월 통상임금 ÷ 209 × 8로 1일 통상임금을 구합니다. 통상임금에는 기본급과 정기·일률적으로 지급되는 고정수당이 들어가고, 실적에 따라 달라지는 성과급 등은 보통 제외됩니다.</div></details>
+<details class="faq-item"><summary>3년 차부터 연차가 늘어나나요?</summary><div class="faq-a">계속근로 3년이 되는 시점부터 최초 1년을 넘는 근속기간 2년마다 1일이 더해집니다. 근속 1·2년 15일, 3·4년 16일, 5·6년 17일이며 21년 이상은 최대 25일입니다.</div></details>
+<details class="faq-item"><summary>5인 미만 회사나 아르바이트도 연차가 있나요?</summary><div class="faq-a">상시 근로자 4인 이하 사업장에는 연차 규정(제60조)이 적용되지 않습니다. 주 15시간 미만으로 일하는 초단시간 근로자도 연차가 없습니다. 주 15시간 이상 단시간 근로자는 통상 근로자 연차일수 × (본인 소정근로시간 ÷ 통상 근로자 소정근로시간) × 8시간으로 시간 단위 연차가 생깁니다.</div></details>
+<details class="faq-item"><summary>육아휴직이나 출산휴가 기간은 출근율에서 빠지나요?</summary><div class="faq-a">아닙니다. 업무상 부상·질병으로 휴업한 기간, 출산전후휴가 기간, 육아휴직 기간은 출근한 것으로 봅니다(제60조⑥). 그래서 이런 기간이 있어도 출근율 80% 판단에서 불리하지 않습니다.</div></details></div>
+<aside class="disclaimer">
+  <strong>안내</strong>  이 계산기는 공개된 법령·고시를 바탕으로 한 참고용 추정치이며, 개별 사안에 대한 노무·세무 자문이 아닙니다. 계산 기준일과 요율 출처는 <a href="/rates/">2026 요율·기준표</a>에서 확인할 수 있습니다. 오류를 발견하시면 <a href="https://github.com/seungyun-shin/seungyun-shin.github.io/issues" rel="noopener">제보</a>해 주세요.
+</aside>
+<h2>함께 쓰는 계산기</h2><ul class="related"><li><a href="/social-insurance/">4대보험 계산기</a></li><li><a href="/take-home-pay/">연봉 실수령액</a></li><li><a href="/severance-pay/">퇴직금 계산기</a></li><li><a href="/unemployment-benefit/">실업급여 계산기</a></li></ul>
+<p class="muted small">최종 수정: 2026-10-25 · 요율 점검: 2026-10-25</p>
+</section>
+</main>
+<footer class="site-footer">
+  <div class="wrap">
+    <p class="footer-links"><a href="/">홈</a> · <a href="/rates/">2026 요율·기준표</a> · <a href="/about/">사이트 소개</a> · <a href="/privacy/">개인정보처리방침</a> · <a href="https://github.com/seungyun-shin/seungyun-shin.github.io/issues" rel="noopener">오류 제보</a></p>
+    <p class="muted">이 사이트의 계산 결과는 참고용 추정치이며 법적 효력이 없습니다. 실제 지급·원천징수·납부액은 회사의 규정, 개별 사정, 관계 기관의 판단에 따라 달라질 수 있습니다. 중요한 의사결정 전에는 고용노동부(국번 없이 1350), 국세청(126), 국민연금공단(1355), 국민건강보험공단(1577-1000) 또는 노무사·세무사와 확인하세요.</p>
+    <p class="muted">요율 최종 점검일: 2026-10-25</p>
+  </div>
+</footer>
+<script type="module" src="/js/ui/annual-leave.js"></script>
+</body>
+</html>
