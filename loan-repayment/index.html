@@ -1,0 +1,121 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>대출 이자 계산기 2026 — 원리금균등·원금균등·만기일시 | 근거 계산기</title>
+<meta name="description" content="대출 금액·연 이율·기간으로 원리금균등, 원금균등, 만기일시 상환의 월 상환액과 총이자를 계산합니다. 거치기간을 넣을 수 있고 월별 상환표(원금·이자·잔액)를 펼쳐 볼 수 있습니다.">
+<link rel="canonical" href="https://seungyun-shin.github.io/loan-repayment/">
+
+<meta property="og:type" content="website">
+<meta property="og:locale" content="ko_KR">
+<meta property="og:site_name" content="근거 계산기">
+<meta property="og:title" content="대출 이자 계산기 2026 — 원리금균등·원금균등·만기일시 | 근거 계산기">
+<meta property="og:description" content="대출 금액·연 이율·기간으로 원리금균등, 원금균등, 만기일시 상환의 월 상환액과 총이자를 계산합니다. 거치기간을 넣을 수 있고 월별 상환표(원금·이자·잔액)를 펼쳐 볼 수 있습니다.">
+<meta property="og:url" content="https://seungyun-shin.github.io/loan-repayment/">
+<meta property="og:image" content="https://seungyun-shin.github.io/assets/og.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="theme-color" content="#1f5eff">
+<link rel="icon" href="/assets/favicon.svg" type="image/svg+xml">
+<link rel="stylesheet" href="/assets/style.css">
+<!-- ADSENSE: 승인 후 이 위치에 애드센스 스크립트를 넣는다 (site.config.js adsEnabled=true) -->
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"WebApplication","name":"대출 원리금 계산기","url":"https://seungyun-shin.github.io/loan-repayment/","description":"대출 금액·연 이율·기간으로 원리금균등, 원금균등, 만기일시 상환의 월 상환액과 총이자를 계산합니다. 거치기간을 넣을 수 있고 월별 상환표(원금·이자·잔액)를 펼쳐 볼 수 있습니다.","applicationCategory":"FinanceApplication","operatingSystem":"Any","inLanguage":"ko-KR","isAccessibleForFree":true,"offers":{"@type":"Offer","price":"0","priceCurrency":"KRW"},"dateModified":"2026-10-26","publisher":{"@type":"Organization","name":"근거 계산기","url":"https://seungyun-shin.github.io/"}}</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"원리금균등과 원금균등 중 어느 쪽이 이자가 적나요?","acceptedAnswer":{"@type":"Answer","text":"같은 금액·금리·기간이면 원금균등의 총이자가 더 적습니다. 3,000만원을 연 6%로 36개월 빌리면 원리금균등 총이자는 2,855,692원, 원금균등은 2,775,000원입니다. 대신 원금균등은 첫 달 상환액(983,333원)이 원리금균등(912,658원)보다 큽니다."}},{"@type":"Question","name":"1억원을 30년 동안 빌리면 한 달에 얼마씩 갚나요?","acceptedAnswer":{"@type":"Answer","text":"연 5%, 원리금균등이면 매달 약 536,822원이고 30년 총이자는 93,255,588원입니다. 금리가 바뀌면 위 계산기에 이율만 바꿔 넣으면 됩니다."}},{"@type":"Question","name":"거치기간을 두면 이자가 얼마나 늘어나나요?","acceptedAnswer":{"@type":"Answer","text":"2억원, 연 4%, 360개월 원리금균등 기준으로 거치기간이 없으면 월 954,831원, 총이자 143,738,862원입니다. 거치 12개월을 두면 그동안 월 이자 666,667원만 내지만, 이후 월 상환액이 971,947원로 늘고 총이자는 146,237,528원가 됩니다."}},{"@type":"Question","name":"만기일시상환은 언제 유리한가요?","acceptedAnswer":{"@type":"Answer","text":"매달 이자만 내므로 월 부담이 가장 작고, 만기 전에 목돈이 들어올 예정이거나 전세자금처럼 만기에 보증금을 돌려받아 갚는 대출에 맞습니다. 다만 원금이 줄지 않아 총이자는 세 방식 중 가장 많습니다."}},{"@type":"Question","name":"중도상환수수료는 언제까지 내야 하나요?","acceptedAnswer":{"@type":"Answer","text":"금융소비자보호법 제20조는 대출계약이 성립한 날부터 3년 이내에 갚는 경우 등을 빼고는 중도상환수수료를 물리는 것을 불공정영업행위로 금지합니다. 실제 수수료율과 면제 조건은 대출 약정서에서 확인하세요. 이 계산기는 중도상환을 계산하지 않습니다."}},{"@type":"Question","name":"대출 이자에 법정 상한이 있나요?","acceptedAnswer":{"@type":"Answer","text":"있습니다. 이자제한법 제2조와 최고이자율에 관한 규정에 따라 금전대차 계약의 최고이자율은 연 20%입니다. 이를 넘는 이자 약정은 넘는 부분이 무효이고, 이미 낸 초과 이자는 원금에 충당되며 원금이 없어지면 돌려달라고 청구할 수 있습니다."}}]}</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"홈","item":"https://seungyun-shin.github.io/"},{"@type":"ListItem","position":2,"name":"대출 원리금 계산기","item":"https://seungyun-shin.github.io/loan-repayment/"}]}</script>
+</head>
+<body>
+<a class="skip" href="#main">본문 바로가기</a>
+<header class="site-header">
+  <div class="wrap header-inner">
+    <a class="brand" href="/">근거 계산기</a>
+    <details class="nav-toggle">
+      <summary aria-label="계산기 메뉴">메뉴</summary>
+      <nav class="nav" aria-label="계산기 목록"><a href="/annual-leave/">연차 계산기</a><a href="/social-insurance/">4대보험 계산기</a><a href="/take-home-pay/">연봉 실수령액</a><a href="/severance-pay/">퇴직금 계산기</a><a href="/parental-leave/">육아휴직급여</a><a href="/gift-tax/">증여세 계산기</a><a href="/year-end-tax/">연말정산 계산기</a><a href="/housing-score/">청약가점 계산기</a><a href="/maternity-leave/">출산휴가급여</a><a href="/inheritance-tax/">상속세 계산기</a><a href="/unemployment-benefit/">실업급여 계산기</a><a href="/loan-repayment/" aria-current="page">대출 이자 계산기</a><a href="/deposit-interest/">예금·적금 이자</a><a href="/rent-conversion/">전월세 전환</a><a href="/area-pyeong/">평수 계산기</a><a href="/age-dday/">만 나이·D-day</a></nav>
+    </details>
+  </div>
+</header>
+<main id="main" class="wrap">
+
+<nav class="breadcrumb" aria-label="경로"><a href="/">홈</a> › <span>대출 원리금 계산기</span></nav>
+<h1>대출 원리금 계산기</h1>
+<p class="badges"><span class="badge">2026년 10월 기준 · 이자제한법 최고이자율 연 20%</span></p>
+<p class="lead">대출 원금, 연 이율, 대출 기간, 상환 방식을 넣으면 매달 갚을 돈과 총이자를 계산하고 월별 상환표를 만듭니다. 거치기간을 넣으면 그 기간에는 이자만 내고 남은 기간에 원금을 나눠 갚는 것으로 계산합니다.</p>
+
+<section class="card calc" aria-labelledby="calc-title">
+  <h2 id="calc-title" class="sr-only">계산 입력</h2>
+  <noscript><p class="note">이 계산기는 브라우저의 자바스크립트로 계산합니다. 자바스크립트를 켜 주세요.</p></noscript>
+  <form id="calc-form" novalidate autocomplete="off">
+<div class="row row-2"><div class="field"><label for="principal">대출 원금</label><div class="input-unit"><input type="text" id="principal" name="principal" data-money placeholder=""><span class="unit">원</span></div></div><div class="field"><label for="annualRate">연 이율</label><div class="input-unit"><input type="number" id="annualRate" name="annualRate" inputmode="decimal" min="0" max="100" step="0.01"><span class="unit">%</span></div><span class="hint">대출 약정서의 연 금리</span></div></div>
+<div class="row row-2"><div class="field"><label for="months">대출 기간</label><div class="input-unit"><input type="number" id="months" name="months" inputmode="decimal" min="1" max="600" step="1"><span class="unit">개월</span></div><span class="hint">거치기간 포함. 30년 = 360개월</span></div><div class="field"><label for="graceMonths">거치기간</label><div class="input-unit"><input type="number" id="graceMonths" name="graceMonths" inputmode="decimal" min="0" step="1"><span class="unit">개월</span></div><span class="hint">이자만 내는 기간. 없으면 0</span></div></div>
+<div class="field" role="radiogroup" aria-labelledby="method-lbl"><span class="label" id="method-lbl">상환 방식</span><div class="seg"><label><input type="radio" name="method" value="equalPayment"><span>원리금균등</span></label><label><input type="radio" name="method" value="equalPrincipal"><span>원금균등</span></label><label><input type="radio" name="method" value="bullet"><span>만기일시</span></label></div></div>
+    <div class="actions"><button type="submit" class="btn">계산하기</button><button type="button" class="btn btn-ghost" id="btn-reset">초기화</button></div>
+  </form>
+</section>
+<section id="result" class="card result" aria-live="polite" hidden></section>
+<!-- AD SLOT: loan-repayment-after-result (애드센스 승인 후 광고 코드 삽입) -->
+<div class="ad-slot" data-ad-slot="loan-repayment-after-result" aria-hidden="true"></div>
+<section class="content">
+
+<h2>상환 방식별 계산 공식</h2>
+<div class="formula">
+월 이율 i = 연 이율 ÷ 12, 상환 개월 수 n = 대출 기간 − 거치기간<br>
+원리금균등 월 상환액 = 원금 × i × (1 + i)<sup>n</sup> ÷ ((1 + i)<sup>n</sup> − 1)<br>
+원금균등 월 원금 = 원금 ÷ n, 월 이자 = 남은 원금 × i<br>
+만기일시 월 이자 = 원금 × i, 마지막 달에 원금 전액 상환
+</div>
+<ul>
+  <li><strong>원리금균등</strong>: 매달 내는 돈이 같습니다. 초반에는 이자 비중이 크고 갈수록 원금 비중이 커집니다. 주택담보대출에서 많이 씁니다.</li>
+  <li><strong>원금균등</strong>: 매달 같은 원금에 남은 원금의 이자를 더해 냅니다. 첫 달이 가장 많고 점점 줄어듭니다. 같은 조건이면 총이자가 원리금균등보다 적습니다.</li>
+  <li><strong>만기일시</strong>: 매달 이자만 내고 만기에 원금을 한 번에 갚습니다. 신용대출·전세자금대출에서 흔하고, 총이자가 가장 많습니다.</li>
+  <li><strong>거치기간</strong>: 이자만 내는 기간입니다. 거치기간이 끝나면 남은 기간에 원금을 나눠 갚으므로 월 상환액이 커지고 총이자도 늘어납니다.</li>
+</ul>
+<h3>끝수 처리와 실제 은행 계산과의 차이</h3>
+<p>이 계산기는 월 이자를 '남은 원금 × 연 이율 ÷ 12'로 계산하고 원 미만은 반올림합니다. 원리금균등 월 상환액도 원 미만 반올림하며, 쌓인 끝수는 마지막 달 원금에서 정리합니다. 실제 은행은 이자를 실제 일수(예: 31일 ÷ 365일)로 계산하는 경우가 많아 달마다 몇 원~몇백 원 다를 수 있습니다. 변동금리 대출은 금리가 바뀌는 시점부터 상환액이 다시 계산됩니다.</p>
+<h3>이자의 법정 상한</h3>
+<p>금전대차 계약의 최고이자율은 연 20%입니다(이자제한법 제2조①, 최고이자율에 관한 규정). 20%를 넘는 부분의 이자 약정은 무효이고, 이미 냈다면 원금에 충당하거나 돌려받을 수 있습니다(같은 조 ③④). 이 계산기는 20%를 넘는 이율을 넣으면 결과에 안내를 표시합니다.</p>
+<h2 id="examples">계산 예시</h2>
+<p class="small muted">아래 숫자는 이 페이지의 계산기와 같은 계산 모듈로 빌드할 때 계산해 넣은 값입니다. 같은 값을 위 계산기에 넣으면 같은 결과가 나옵니다.</p>
+<div class="example" id="ex-loan-1e8-30y" data-example="loan-1e8-30y"><h3><span class="exv" data-ex="loan-1e8-30y" data-in="principal" data-fmt="man">1억원</span>을 연 <span class="exv" data-ex="loan-1e8-30y" data-in="annualRate" data-fmt="pctNum">5%</span>, <span class="exv" data-ex="loan-1e8-30y" data-in="months" data-fmt="month">360개월</span> 원리금균등으로 빌리면</h3><ul>
+  <li>거치기간 없이 <span class="exv" data-ex="loan-1e8-30y" data-out="repayMonths" data-fmt="month">360개월</span> 동안 같은 금액을 갚습니다</li>
+  <li>매달 내는 돈(원리금) <strong><span class="exv" data-ex="loan-1e8-30y" data-out="regularPayment" data-fmt="won">536,822원</span></strong> — 마지막 달은 끝수를 맞춰 <span class="exv" data-ex="loan-1e8-30y" data-out="lastPayment" data-fmt="won">536,490원</span></li>
+  <li>첫 달 원리금 중 이자 <span class="exv" data-ex="loan-1e8-30y" data-out="schedule.0.interest" data-fmt="won">416,667원</span>, 원금 <span class="exv" data-ex="loan-1e8-30y" data-out="schedule.0.principal" data-fmt="won">120,155원</span></li>
+  <li>총이자 <strong><span class="exv" data-ex="loan-1e8-30y" data-out="totalInterest" data-fmt="won">93,255,588원</span></strong>, 갚는 돈 합계 <span class="exv" data-ex="loan-1e8-30y" data-out="totalPayment" data-fmt="won">193,255,588원</span></li>
+</ul></div><!--/ex-loan-1e8-30y-->
+<div class="example" id="ex-loan-30m-compare" data-example="loan-30m-compare"><h3><span class="exv" data-ex="loan-30m-compare" data-in="principal" data-fmt="man">3,000만원</span>, 연 <span class="exv" data-ex="loan-30m-compare" data-in="annualRate" data-fmt="pctNum">6%</span>, <span class="exv" data-ex="loan-30m-compare" data-in="months" data-fmt="month">36개월</span> — 상환 방식 세 가지 비교</h3><div class="table-scroll"><table>
+<thead><tr><th>방식</th><th class="num">첫 달</th><th class="num">마지막 달</th><th class="num">총이자</th></tr></thead>
+<tbody>
+<tr><td>원리금균등</td><td class="num"><span class="exv" data-ex="loan-30m-compare" data-out="ep.firstPayment" data-fmt="won">912,658원</span></td><td class="num"><span class="exv" data-ex="loan-30m-compare" data-out="ep.lastPayment" data-fmt="won">912,662원</span></td><td class="num"><span class="exv" data-ex="loan-30m-compare" data-out="ep.totalInterest" data-fmt="won">2,855,692원</span></td></tr>
+<tr><td>원금균등</td><td class="num"><span class="exv" data-ex="loan-30m-compare" data-out="pr.firstPayment" data-fmt="won">983,333원</span></td><td class="num"><span class="exv" data-ex="loan-30m-compare" data-out="pr.lastPayment" data-fmt="won">837,512원</span></td><td class="num"><span class="exv" data-ex="loan-30m-compare" data-out="pr.totalInterest" data-fmt="won">2,775,000원</span></td></tr>
+<tr><td>만기일시</td><td class="num"><span class="exv" data-ex="loan-30m-compare" data-out="bu.firstPayment" data-fmt="won">150,000원</span></td><td class="num"><span class="exv" data-ex="loan-30m-compare" data-out="bu.lastPayment" data-fmt="won">30,150,000원</span></td><td class="num"><span class="exv" data-ex="loan-30m-compare" data-out="bu.totalInterest" data-fmt="won">5,400,000원</span></td></tr>
+</tbody></table></div>
+<p>원금균등은 첫 달 부담이 가장 크지만 원금이 빨리 줄어 총이자가 가장 적고, 만기일시는 매달 이자만 내다 마지막 달에 원금을 한 번에 갚아 총이자가 가장 많습니다.</p></div><!--/ex-loan-30m-compare-->
+<h2>근거 법령·자료</h2>
+<ul class="laws"><li><a href="https://www.law.go.kr/법령/이자제한법/제2조" target="_blank" rel="noopener">이자제한법 제2조 (이자의 최고한도)</a></li><li><a href="https://www.law.go.kr/법령/이자제한법제2조제1항의최고이자율에관한규정" target="_blank" rel="noopener">이자제한법 제2조제1항의 최고이자율에 관한 규정</a> — 연 20퍼센트 (2021.7.7. 시행)</li><li><a href="https://www.law.go.kr/법령/금융소비자보호에관한법률/제20조" target="_blank" rel="noopener">금융소비자 보호에 관한 법률 제20조 (불공정영업행위의 금지)</a> — 중도상환수수료는 3년 이내 상환 등에만</li></ul>
+<!-- AD SLOT: loan-repayment-mid (애드센스 승인 후 광고 코드 삽입) -->
+<div class="ad-slot" data-ad-slot="loan-repayment-mid" aria-hidden="true"></div>
+<h2>자주 묻는 질문</h2>
+<div class="faq"><details class="faq-item"><summary>원리금균등과 원금균등 중 어느 쪽이 이자가 적나요?</summary><div class="faq-a">같은 금액·금리·기간이면 원금균등의 총이자가 더 적습니다. <span class="exv" data-ex="loan-30m-compare" data-in="principal" data-fmt="man">3,000만원</span>을 연 <span class="exv" data-ex="loan-30m-compare" data-in="annualRate" data-fmt="pctNum">6%</span>로 <span class="exv" data-ex="loan-30m-compare" data-in="months" data-fmt="month">36개월</span> 빌리면 원리금균등 총이자는 <span class="exv" data-ex="loan-30m-compare" data-out="ep.totalInterest" data-fmt="won">2,855,692원</span>, 원금균등은 <span class="exv" data-ex="loan-30m-compare" data-out="pr.totalInterest" data-fmt="won">2,775,000원</span>입니다. 대신 원금균등은 첫 달 상환액(<span class="exv" data-ex="loan-30m-compare" data-out="pr.firstPayment" data-fmt="won">983,333원</span>)이 원리금균등(<span class="exv" data-ex="loan-30m-compare" data-out="ep.firstPayment" data-fmt="won">912,658원</span>)보다 큽니다.</div></details>
+<details class="faq-item"><summary>1억원을 30년 동안 빌리면 한 달에 얼마씩 갚나요?</summary><div class="faq-a">연 <span class="exv" data-ex="loan-1e8-30y" data-in="annualRate" data-fmt="pctNum">5%</span>, 원리금균등이면 매달 약 <strong><span class="exv" data-ex="loan-1e8-30y" data-out="regularPayment" data-fmt="won">536,822원</span></strong>이고 30년 총이자는 <span class="exv" data-ex="loan-1e8-30y" data-out="totalInterest" data-fmt="won">93,255,588원</span>입니다. 금리가 바뀌면 위 계산기에 이율만 바꿔 넣으면 됩니다.</div></details>
+<details class="faq-item"><summary>거치기간을 두면 이자가 얼마나 늘어나나요?</summary><div class="faq-a"><span class="exv" data-ex="loan-grace" data-in="principal" data-fmt="man">2억원</span>, 연 <span class="exv" data-ex="loan-grace" data-in="annualRate" data-fmt="pctNum">4%</span>, <span class="exv" data-ex="loan-grace" data-in="months" data-fmt="month">360개월</span> 원리금균등 기준으로 거치기간이 없으면 월 <span class="exv" data-ex="loan-grace" data-out="none.regularPayment" data-fmt="won">954,831원</span>, 총이자 <span class="exv" data-ex="loan-grace" data-out="none.totalInterest" data-fmt="won">143,738,862원</span>입니다. 거치 <span class="exv" data-ex="loan-grace" data-in="graceMonths" data-fmt="month">12개월</span>을 두면 그동안 월 이자 <span class="exv" data-ex="loan-grace" data-out="grace.graceInterest" data-fmt="won">666,667원</span>만 내지만, 이후 월 상환액이 <span class="exv" data-ex="loan-grace" data-out="grace.regularPayment" data-fmt="won">971,947원</span>로 늘고 총이자는 <span class="exv" data-ex="loan-grace" data-out="grace.totalInterest" data-fmt="won">146,237,528원</span>가 됩니다.</div></details>
+<details class="faq-item"><summary>만기일시상환은 언제 유리한가요?</summary><div class="faq-a">매달 이자만 내므로 월 부담이 가장 작고, 만기 전에 목돈이 들어올 예정이거나 전세자금처럼 만기에 보증금을 돌려받아 갚는 대출에 맞습니다. 다만 원금이 줄지 않아 총이자는 세 방식 중 가장 많습니다.</div></details>
+<details class="faq-item"><summary>중도상환수수료는 언제까지 내야 하나요?</summary><div class="faq-a">금융소비자보호법 제20조는 대출계약이 성립한 날부터 3년 이내에 갚는 경우 등을 빼고는 중도상환수수료를 물리는 것을 불공정영업행위로 금지합니다. 실제 수수료율과 면제 조건은 대출 약정서에서 확인하세요. 이 계산기는 중도상환을 계산하지 않습니다.</div></details>
+<details class="faq-item"><summary>대출 이자에 법정 상한이 있나요?</summary><div class="faq-a">있습니다. 이자제한법 제2조와 최고이자율에 관한 규정에 따라 금전대차 계약의 최고이자율은 연 20%입니다. 이를 넘는 이자 약정은 넘는 부분이 무효이고, 이미 낸 초과 이자는 원금에 충당되며 원금이 없어지면 돌려달라고 청구할 수 있습니다.</div></details></div>
+<aside class="disclaimer">
+  <strong>안내</strong>  이 계산기는 공개된 법령·고시를 바탕으로 한 참고용 추정치이며, 개별 사안에 대한 노무·세무 자문이 아닙니다. 계산 기준일과 요율 출처는 <a href="/rates/">2026 요율·기준표</a>에서 확인할 수 있습니다. 오류를 발견하시면 <a href="https://github.com/seungyun-shin/seungyun-shin.github.io/issues" rel="noopener">제보</a>해 주세요.
+</aside>
+<h2>함께 쓰는 계산기</h2><ul class="related"><li><a href="/take-home-pay/">연봉 실수령액</a></li><li><a href="/deposit-interest/">예금·적금 이자</a></li><li><a href="/rent-conversion/">전월세 전환</a></li><li><a href="/area-pyeong/">평수 계산기</a></li></ul>
+<p class="muted small">최종 수정: 2026-10-26 · 요율 점검: 2026-10-25</p>
+</section>
+</main>
+<footer class="site-footer">
+  <div class="wrap">
+    <p class="footer-links"><a href="/">홈</a> · <a href="/rates/">2026 요율·기준표</a> · <a href="/about/">사이트 소개</a> · <a href="/privacy/">개인정보처리방침</a> · <a href="https://github.com/seungyun-shin/seungyun-shin.github.io/issues" rel="noopener">오류 제보</a></p>
+    <p class="muted">이 사이트의 계산 결과는 참고용 추정치이며 법적 효력이 없습니다. 실제 지급·원천징수·납부액은 회사의 규정, 개별 사정, 관계 기관의 판단에 따라 달라질 수 있습니다. 중요한 의사결정 전에는 고용노동부(국번 없이 1350), 국세청(126), 국민연금공단(1355), 국민건강보험공단(1577-1000) 또는 노무사·세무사와 확인하세요.</p>
+    <p class="muted">요율 최종 점검일: 2026-10-25</p>
+  </div>
+</footer>
+<script type="module" src="/js/ui/loan-repayment.js"></script>
+</body>
+</html>
