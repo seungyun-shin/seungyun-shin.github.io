@@ -155,3 +155,10 @@ tfoot td { font-weight: 800; }
 .ad-slot { display: none; }
 .ads-on .ad-slot { display: block; min-height: 280px; margin: 20px 0; }
 @media print { .site-header, .site-footer, .ad-slot, .actions { display: none !important; } }
+
+/* 계산 예시 (빌드 시 계산 엔진으로 채운 숫자) */
+.example { background: var(--surface); border: 1px solid var(--line); border-radius: var(--radius); padding: 12px 14px; margin: 12px 0; }
+.example h3 { margin: 0 0 8px; font-size: 16.5px; }
+.example ul { margin: 0; }
+.example p { margin: 6px 0; }
+.exv { white-space: nowrap; }

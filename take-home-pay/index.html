@@ -3,15 +3,15 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>연봉 실수령액 계산기 2026 — 2026.3. 개정 간이세액표·4대보험 반영 | 근거 계산기</title>
-<meta name="description" content="2026년 3월 개정 근로소득 간이세액표와 2026년 4대보험 요율로 월 실수령액을 계산합니다. 부양가족·자녀 수, 비과세 식대, 80·120% 선택, 역산까지. 공식 표 7,117칸과 전수 대조했습니다.">
+<title>연봉 실수령액 계산기 2026 — 월급 실수령액·4대보험·소득세 | 근거 계산기</title>
+<meta name="description" content="연봉을 넣으면 2026년 4대보험료와 2026년 3월 개정 간이세액표 소득세를 빼고 매달 통장에 들어오는 실수령액을 계산합니다. 부양가족·자녀 수, 비과세 식대, 80·120% 선택, 필요 연봉 역산까지. 연봉별 계산 예시 포함.">
 <link rel="canonical" href="https://seungyun-shin.github.io/take-home-pay/">
 
 <meta property="og:type" content="website">
 <meta property="og:locale" content="ko_KR">
 <meta property="og:site_name" content="근거 계산기">
-<meta property="og:title" content="연봉 실수령액 계산기 2026 — 2026.3. 개정 간이세액표·4대보험 반영 | 근거 계산기">
-<meta property="og:description" content="2026년 3월 개정 근로소득 간이세액표와 2026년 4대보험 요율로 월 실수령액을 계산합니다. 부양가족·자녀 수, 비과세 식대, 80·120% 선택, 역산까지. 공식 표 7,117칸과 전수 대조했습니다.">
+<meta property="og:title" content="연봉 실수령액 계산기 2026 — 월급 실수령액·4대보험·소득세 | 근거 계산기">
+<meta property="og:description" content="연봉을 넣으면 2026년 4대보험료와 2026년 3월 개정 간이세액표 소득세를 빼고 매달 통장에 들어오는 실수령액을 계산합니다. 부양가족·자녀 수, 비과세 식대, 80·120% 선택, 필요 연봉 역산까지. 연봉별 계산 예시 포함.">
 <meta property="og:url" content="https://seungyun-shin.github.io/take-home-pay/">
 <meta property="og:image" content="https://seungyun-shin.github.io/assets/og.png">
 <meta property="og:image:width" content="1200">
@@ -21,8 +21,8 @@
 <link rel="icon" href="/assets/favicon.svg" type="image/svg+xml">
 <link rel="stylesheet" href="/assets/style.css">
 <!-- ADSENSE: 승인 후 이 위치에 애드센스 스크립트를 넣는다 (site.config.js adsEnabled=true) -->
-<script type="application/ld+json">{"@context":"https://schema.org","@type":"WebApplication","name":"연봉 실수령액 계산기 (2026)","url":"https://seungyun-shin.github.io/take-home-pay/","description":"2026년 3월 개정 근로소득 간이세액표와 2026년 4대보험 요율로 월 실수령액을 계산합니다. 부양가족·자녀 수, 비과세 식대, 80·120% 선택, 역산까지. 공식 표 7,117칸과 전수 대조했습니다.","applicationCategory":"FinanceApplication","operatingSystem":"Any","inLanguage":"ko-KR","isAccessibleForFree":true,"offers":{"@type":"Offer","price":"0","priceCurrency":"KRW"},"dateModified":"2026-10-25","publisher":{"@type":"Organization","name":"근거 계산기","url":"https://seungyun-shin.github.io/"}}</script>
-<script type="application/ld+json">{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"연봉 4,000만원이면 실수령액이 얼마인가요?","acceptedAnswer":{"@type":"Answer","text":"비과세 식대 20만원, 본인 1명 기준으로 2026년 10월 현재 월 약 293만 6천원입니다(월 급여 3,333,333원 − 4대보험 304,440원 − 소득세 84,620원 − 지방소득세 8,460원). 위 계산기에 연봉을 넣으면 항목별로 정확한 금액과 근거를 볼 수 있습니다. 부양가족이 많을수록 소득세가 줄어 실수령액이 늘어납니다."}},{"@type":"Question","name":"2026년에 실수령액이 줄어든 이유는 뭔가요?","acceptedAnswer":{"@type":"Answer","text":"국민연금 보험료율이 9%에서 9.5%로 올라 근로자 부담이 4.5%에서 4.75%가 됐고, 건강보험료율도 7.09%에서 7.19%로, 장기요양보험료율도 올랐기 때문입니다. 월급 300만원 기준 국민연금만 월 7,500원 늘었습니다."}},{"@type":"Question","name":"간이세액표는 언제 바뀌었나요?","acceptedAnswer":{"@type":"Answer","text":"2026년 2월 27일 소득세법 시행령 개정으로 별표 2가 바뀌었고, 2026년 3월 1일 이후 원천징수하는 급여부터 적용됩니다. 2025년 자녀세액공제 인상(1명 연 25만원, 2명 연 55만원 등)을 반영해 표의 자녀 공제액이 1명 월 20,830원, 2명 45,830원, 3명 이상 45,830원 + 1명당 33,330원으로 바뀌었습니다."}},{"@type":"Question","name":"공제대상가족 수에 본인도 포함하나요?","acceptedAnswer":{"@type":"Answer","text":"네. 본인은 항상 1명으로 셉니다. 소득이 없는 배우자가 있으면 2명, 여기에 기본공제 대상 자녀 2명이면 4명입니다. 자녀 수 칸에는 그중 8세 이상 20세 이하 자녀만 넣습니다."}},{"@type":"Question","name":"비과세 식대는 꼭 넣어야 하나요?","acceptedAnswer":{"@type":"Answer","text":"회사가 급여명세서에 식대를 비과세로 따로 지급하는 경우에만 넣으세요. 월 20만원까지 비과세이며, 그만큼 소득세와 4대보험료가 줄어듭니다. 회사에서 식사를 제공받으면 식대 비과세가 적용되지 않습니다."}},{"@type":"Question","name":"80%와 120% 중 무엇을 골라야 하나요?","acceptedAnswer":{"@type":"Answer","text":"1년 동안 낼 세금 총액은 같고, 매달 떼는 시점만 다릅니다. 연말정산에서 환급을 받는 편이면 80%로 매달 덜 떼고, 매년 추가 납부가 나오는 편이면 120%로 미리 더 떼는 것이 낫습니다."}},{"@type":"Question","name":"계산 결과가 실제 급여명세서와 다른 이유는?","acceptedAnswer":{"@type":"Answer","text":"국민연금은 신고된 기준소득월액(보통 전년도 소득)으로, 건강보험은 전년도 보수로 먼저 부과하기 때문에 연봉이 오른 해에는 차이가 납니다. 또 상여금·수당이 있는 달은 월급여가 달라지고, 회사가 공제대상가족 수를 다르게 신고했을 수 있습니다."}}]}</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"WebApplication","name":"연봉 실수령액 계산기 (2026)","url":"https://seungyun-shin.github.io/take-home-pay/","description":"연봉을 넣으면 2026년 4대보험료와 2026년 3월 개정 간이세액표 소득세를 빼고 매달 통장에 들어오는 실수령액을 계산합니다. 부양가족·자녀 수, 비과세 식대, 80·120% 선택, 필요 연봉 역산까지. 연봉별 계산 예시 포함.","applicationCategory":"FinanceApplication","operatingSystem":"Any","inLanguage":"ko-KR","isAccessibleForFree":true,"offers":{"@type":"Offer","price":"0","priceCurrency":"KRW"},"dateModified":"2026-10-26","publisher":{"@type":"Organization","name":"근거 계산기","url":"https://seungyun-shin.github.io/"}}</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"연봉 4,000만원이면 월 실수령액이 얼마인가요?","acceptedAnswer":{"@type":"Answer","text":"비과세 식대 20만원, 본인 1명 기준 2026년 10월 현재 월 2,935,813원입니다. 월 급여 3,333,333원에서 4대보험 304,440원, 소득세 84,620원, 지방소득세 8,460원를 뺀 금액입니다. 부양가족이 많으면 소득세가 줄어 실수령액이 늘어납니다."}},{"@type":"Question","name":"연봉 5,000만원, 4인 가족이면 실수령액은?","acceptedAnswer":{"@type":"Answer","text":"본인·배우자·자녀 2명(8~20세)으로 공제대상가족 4명, 식대 비과세 20만원이면 월 3,734,606원입니다. 소득세가 42,420원로 1인 가구보다 적습니다. 위 계산기에서 가족 수를 바꿔 비교해 보세요."}},{"@type":"Question","name":"2026년에 실수령액이 줄어든 이유는 뭔가요?","acceptedAnswer":{"@type":"Answer","text":"국민연금 보험료율이 9%에서 9.5%로 올라 근로자 부담이 4.5%에서 4.75%가 됐고, 건강보험료율도 7.09%에서 7.19%로, 장기요양보험료율도 올랐기 때문입니다. 소득세 간이세액표는 2026년 3월 개정으로 자녀 공제액이 커졌습니다."}},{"@type":"Question","name":"공제대상가족 수에 본인도 포함하나요?","acceptedAnswer":{"@type":"Answer","text":"네. 본인은 항상 1명으로 셉니다. 소득이 없는 배우자가 있으면 2명, 여기에 기본공제 대상 자녀 2명이면 4명입니다. 자녀 수 칸에는 그중 8세 이상 20세 이하 자녀만 넣습니다."}},{"@type":"Question","name":"80%와 120% 중 무엇을 골라야 하나요?","acceptedAnswer":{"@type":"Answer","text":"1년 동안 낼 세금 총액은 같고, 매달 떼는 시점만 다릅니다. 연말정산에서 환급을 받는 편이면 80%로 매달 덜 떼고, 매년 추가 납부가 나오는 편이면 120%로 미리 더 떼는 것이 낫습니다."}},{"@type":"Question","name":"계산 결과가 실제 급여명세서와 다른 이유는?","acceptedAnswer":{"@type":"Answer","text":"국민연금은 신고된 기준소득월액(보통 전년도 소득)으로, 건강보험은 전년도 보수로 먼저 부과하기 때문에 연봉이 오른 해에는 차이가 납니다. 또 상여금·수당이 있는 달은 월급여가 달라지고, 회사가 공제대상가족 수를 다르게 신고했을 수 있습니다. 비과세 식대는 회사에서 식사를 제공받지 않는 경우 월 20만원까지만 인정됩니다."}}]}</script>
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"홈","item":"https://seungyun-shin.github.io/"},{"@type":"ListItem","position":2,"name":"연봉 실수령액 계산기 (2026)","item":"https://seungyun-shin.github.io/take-home-pay/"}]}</script>
 </head>
 <body>
@@ -77,13 +77,6 @@
 월 세액 = (기본세율 산출세액 − 근로소득세액공제) ÷ 12, 10원 미만 절사
 </div>
 <p><strong>검증</strong>: 법제처에 게시된 별표 2 원문(2026. 2. 27. 개정)의 646개 구간 × 공제대상가족 1~11명, 그리고 월 1,000만원 행까지 7,117칸을 모두 비교했습니다. 계산식만으로 7,100칸이 일치하고, 17칸은 10원 차이가 납니다. 연간 세액을 12로 나눈 값이 10원 단위 경계에 1원 미만으로 걸리는 칸들입니다. 이 17칸은 공식 표 값으로 보정했으므로 화면의 소득세는 공식 표와 같습니다.</p>
-<h3>예시: 연봉 3,840만원, 식대 20만원, 본인 1명</h3>
-<ul>
-  <li>월 급여 320만원, 비과세 제외 300만원</li>
-  <li>4대보험 291,520원 (국민연금 142,500 · 건강 107,850 · 장기요양 14,170 · 고용 27,000)</li>
-  <li>소득세 74,350원 (간이세액표 3,000~3,020천원, 1명) · 지방소득세 7,430원</li>
-  <li>월 실수령액 2,826,700원</li>
-</ul>
 <h3>알아두면 좋은 점</h3>
 <ul>
   <li><strong>공제대상가족 수</strong>에는 본인과 배우자가 각각 1명으로 들어갑니다. 연간 소득 100만원(근로소득만 있으면 총급여 500만원) 이하인 배우자·부양가족이 대상입니다.</li>
@@ -91,23 +84,37 @@
   <li><strong>80%·120% 선택</strong>은 매달 떼는 금액만 바꿉니다. 1년 세금은 연말정산에서 확정되므로, 80%를 고르면 월급은 늘지만 연말정산 때 더 낼 수 있습니다.</li>
   <li>상여금이 따로 나오는 달, 연장근로수당이 있는 달은 그 달 월급여가 커져 세금이 더 떼입니다.</li>
 </ul>
+<h2 id="examples">계산 예시</h2>
+<p class="small muted">아래 숫자는 이 페이지의 계산기와 같은 계산 모듈로 빌드할 때 계산해 넣은 값입니다. 같은 값을 위 계산기에 넣으면 같은 결과가 나옵니다.</p>
+<div class="example" id="ex-salary-40m" data-example="salary-40m"><h3>연봉 <span class="exv" data-ex="salary-40m" data-in="annualSalary" data-fmt="man">4,000만원</span>, 식대 비과세 <span class="exv" data-ex="salary-40m" data-in="nonTaxable" data-fmt="man">20만원</span>, 본인 <span class="exv" data-ex="salary-40m" data-in="family" data-fmt="people">1명</span></h3><ul>
+  <li>월 급여 <span class="exv" data-ex="salary-40m" data-out="monthly" data-fmt="won">3,333,333원</span>, 비과세를 뺀 과세 급여 <span class="exv" data-ex="salary-40m" data-out="taxable" data-fmt="won">3,133,333원</span></li>
+  <li>4대보험 <span class="exv" data-ex="salary-40m" data-out="ins.employeeTotal" data-fmt="won">304,440원</span> — 국민연금 <span class="exv" data-ex="salary-40m" data-out="ins.np.employee" data-fmt="won">148,810원</span> · 건강보험 <span class="exv" data-ex="salary-40m" data-out="ins.hi.employee" data-fmt="won">112,640원</span> · 장기요양 <span class="exv" data-ex="salary-40m" data-out="ins.hi.ltcEmployee" data-fmt="won">14,800원</span> · 고용보험 <span class="exv" data-ex="salary-40m" data-out="ins.ei.employee" data-fmt="won">28,190원</span></li>
+  <li>소득세 <span class="exv" data-ex="salary-40m" data-out="tax.incomeTax" data-fmt="won">84,620원</span> (간이세액표) · 지방소득세 <span class="exv" data-ex="salary-40m" data-out="tax.localTax" data-fmt="won">8,460원</span></li>
+  <li><strong>월 실수령액 <span class="exv" data-ex="salary-40m" data-out="net" data-fmt="won">2,935,813원</span></strong>, 연간 <span class="exv" data-ex="salary-40m" data-out="netAnnual" data-fmt="won">35,229,756원</span></li>
+</ul></div><!--/ex-salary-40m-->
+<div class="example" id="ex-salary-50m-family4" data-example="salary-50m-family4"><h3>연봉 <span class="exv" data-ex="salary-50m-family4" data-in="annualSalary" data-fmt="man">5,000만원</span>, 공제대상가족 <span class="exv" data-ex="salary-50m-family4" data-in="family" data-fmt="people">4명</span>(자녀 <span class="exv" data-ex="salary-50m-family4" data-in="children" data-fmt="people">2명</span> 포함)</h3><ul>
+  <li>월 급여 <span class="exv" data-ex="salary-50m-family4" data-out="monthly" data-fmt="won">4,166,666원</span>, 식대 비과세 <span class="exv" data-ex="salary-50m-family4" data-in="nonTaxable" data-fmt="won">200,000원</span></li>
+  <li>4대보험 <span class="exv" data-ex="salary-50m-family4" data-out="ins.employeeTotal" data-fmt="won">385,400원</span> — 국민연금 <span class="exv" data-ex="salary-50m-family4" data-out="ins.np.employee" data-fmt="won">188,380원</span> · 건강보험 <span class="exv" data-ex="salary-50m-family4" data-out="ins.hi.employee" data-fmt="won">142,600원</span> · 장기요양 <span class="exv" data-ex="salary-50m-family4" data-out="ins.hi.ltcEmployee" data-fmt="won">18,730원</span> · 고용보험 <span class="exv" data-ex="salary-50m-family4" data-out="ins.ei.employee" data-fmt="won">35,690원</span></li>
+  <li>소득세 <span class="exv" data-ex="salary-50m-family4" data-out="tax.incomeTax" data-fmt="won">42,420원</span> (자녀 공제 <span class="exv" data-ex="salary-50m-family4" data-out="tax.childDed" data-fmt="won">45,830원</span> 반영) · 지방소득세 <span class="exv" data-ex="salary-50m-family4" data-out="tax.localTax" data-fmt="won">4,240원</span></li>
+  <li><strong>월 실수령액 <span class="exv" data-ex="salary-50m-family4" data-out="net" data-fmt="won">3,734,606원</span></strong></li>
+</ul>
+<p class="small muted">공제대상가족이 많을수록 간이세액표의 소득세가 줄어듭니다. 4대보험은 가족 수와 관계없이 같습니다.</p></div><!--/ex-salary-50m-family4-->
 <h2>근거 법령·자료</h2>
 <ul class="laws"><li><a href="https://www.law.go.kr/LSW/flDownload.do?gubun=&amp;flSeq=169798151&amp;bylClsCd=110201" target="_blank" rel="noopener">소득세법 시행령 [별표 2] 근로소득 간이세액표 (2026. 2. 27. 개정) — PDF</a></li><li><a href="https://www.law.go.kr/법령/소득세법시행령/제194조" target="_blank" rel="noopener">소득세법 시행령 제194조 (간이세액표의 적용, 80·120% 선택)</a></li><li><a href="https://www.law.go.kr/법령/소득세법/제47조" target="_blank" rel="noopener">소득세법 제47조 (근로소득공제)</a></li><li><a href="https://www.law.go.kr/법령/소득세법/제55조" target="_blank" rel="noopener">소득세법 제55조 (세율)</a></li><li><a href="https://www.law.go.kr/법령/소득세법/제59조의2" target="_blank" rel="noopener">소득세법 제59조의2 (자녀세액공제, 2026. 4. 21. 개정)</a></li><li><a href="https://www.law.go.kr/법령/소득세법/제12조" target="_blank" rel="noopener">소득세법 제12조 제3호 러목 (비과세 식사대 월 20만원)</a></li><li><a href="https://www.hometax.go.kr" target="_blank" rel="noopener">국세청 홈택스 근로소득 간이세액표 조회</a></li></ul>
 <!-- AD SLOT: take-home-pay-mid (애드센스 승인 후 광고 코드 삽입) -->
 <div class="ad-slot" data-ad-slot="take-home-pay-mid" aria-hidden="true"></div>
 <h2>자주 묻는 질문</h2>
-<div class="faq"><details class="faq-item"><summary>연봉 4,000만원이면 실수령액이 얼마인가요?</summary><div class="faq-a">비과세 식대 20만원, 본인 1명 기준으로 2026년 10월 현재 월 약 293만 6천원입니다(월 급여 3,333,333원 − 4대보험 304,440원 − 소득세 84,620원 − 지방소득세 8,460원). 위 계산기에 연봉을 넣으면 항목별로 정확한 금액과 근거를 볼 수 있습니다. 부양가족이 많을수록 소득세가 줄어 실수령액이 늘어납니다.</div></details>
-<details class="faq-item"><summary>2026년에 실수령액이 줄어든 이유는 뭔가요?</summary><div class="faq-a">국민연금 보험료율이 9%에서 9.5%로 올라 근로자 부담이 4.5%에서 4.75%가 됐고, 건강보험료율도 7.09%에서 7.19%로, 장기요양보험료율도 올랐기 때문입니다. 월급 300만원 기준 국민연금만 월 7,500원 늘었습니다.</div></details>
-<details class="faq-item"><summary>간이세액표는 언제 바뀌었나요?</summary><div class="faq-a">2026년 2월 27일 소득세법 시행령 개정으로 별표 2가 바뀌었고, 2026년 3월 1일 이후 원천징수하는 급여부터 적용됩니다. 2025년 자녀세액공제 인상(1명 연 25만원, 2명 연 55만원 등)을 반영해 표의 자녀 공제액이 1명 월 20,830원, 2명 45,830원, 3명 이상 45,830원 + 1명당 33,330원으로 바뀌었습니다.</div></details>
+<div class="faq"><details class="faq-item"><summary>연봉 4,000만원이면 월 실수령액이 얼마인가요?</summary><div class="faq-a">비과세 식대 <span class="exv" data-ex="salary-40m" data-in="nonTaxable" data-fmt="man">20만원</span>, 본인 1명 기준 2026년 10월 현재 월 <strong><span class="exv" data-ex="salary-40m" data-out="net" data-fmt="won">2,935,813원</span></strong>입니다. 월 급여 <span class="exv" data-ex="salary-40m" data-out="monthly" data-fmt="won">3,333,333원</span>에서 4대보험 <span class="exv" data-ex="salary-40m" data-out="ins.employeeTotal" data-fmt="won">304,440원</span>, 소득세 <span class="exv" data-ex="salary-40m" data-out="tax.incomeTax" data-fmt="won">84,620원</span>, 지방소득세 <span class="exv" data-ex="salary-40m" data-out="tax.localTax" data-fmt="won">8,460원</span>를 뺀 금액입니다. 부양가족이 많으면 소득세가 줄어 실수령액이 늘어납니다.</div></details>
+<details class="faq-item"><summary>연봉 5,000만원, 4인 가족이면 실수령액은?</summary><div class="faq-a">본인·배우자·자녀 2명(8~20세)으로 공제대상가족 4명, 식대 비과세 20만원이면 월 <strong><span class="exv" data-ex="salary-50m-family4" data-out="net" data-fmt="won">3,734,606원</span></strong>입니다. 소득세가 <span class="exv" data-ex="salary-50m-family4" data-out="tax.incomeTax" data-fmt="won">42,420원</span>로 1인 가구보다 적습니다. 위 계산기에서 가족 수를 바꿔 비교해 보세요.</div></details>
+<details class="faq-item"><summary>2026년에 실수령액이 줄어든 이유는 뭔가요?</summary><div class="faq-a">국민연금 보험료율이 9%에서 9.5%로 올라 근로자 부담이 4.5%에서 4.75%가 됐고, 건강보험료율도 7.09%에서 7.19%로, 장기요양보험료율도 올랐기 때문입니다. 소득세 간이세액표는 2026년 3월 개정으로 자녀 공제액이 커졌습니다.</div></details>
 <details class="faq-item"><summary>공제대상가족 수에 본인도 포함하나요?</summary><div class="faq-a">네. 본인은 항상 1명으로 셉니다. 소득이 없는 배우자가 있으면 2명, 여기에 기본공제 대상 자녀 2명이면 4명입니다. 자녀 수 칸에는 그중 8세 이상 20세 이하 자녀만 넣습니다.</div></details>
-<details class="faq-item"><summary>비과세 식대는 꼭 넣어야 하나요?</summary><div class="faq-a">회사가 급여명세서에 식대를 비과세로 따로 지급하는 경우에만 넣으세요. 월 20만원까지 비과세이며, 그만큼 소득세와 4대보험료가 줄어듭니다. 회사에서 식사를 제공받으면 식대 비과세가 적용되지 않습니다.</div></details>
 <details class="faq-item"><summary>80%와 120% 중 무엇을 골라야 하나요?</summary><div class="faq-a">1년 동안 낼 세금 총액은 같고, 매달 떼는 시점만 다릅니다. 연말정산에서 환급을 받는 편이면 80%로 매달 덜 떼고, 매년 추가 납부가 나오는 편이면 120%로 미리 더 떼는 것이 낫습니다.</div></details>
-<details class="faq-item"><summary>계산 결과가 실제 급여명세서와 다른 이유는?</summary><div class="faq-a">국민연금은 신고된 기준소득월액(보통 전년도 소득)으로, 건강보험은 전년도 보수로 먼저 부과하기 때문에 연봉이 오른 해에는 차이가 납니다. 또 상여금·수당이 있는 달은 월급여가 달라지고, 회사가 공제대상가족 수를 다르게 신고했을 수 있습니다.</div></details></div>
+<details class="faq-item"><summary>계산 결과가 실제 급여명세서와 다른 이유는?</summary><div class="faq-a">국민연금은 신고된 기준소득월액(보통 전년도 소득)으로, 건강보험은 전년도 보수로 먼저 부과하기 때문에 연봉이 오른 해에는 차이가 납니다. 또 상여금·수당이 있는 달은 월급여가 달라지고, 회사가 공제대상가족 수를 다르게 신고했을 수 있습니다. 비과세 식대는 회사에서 식사를 제공받지 않는 경우 월 20만원까지만 인정됩니다.</div></details></div>
 <aside class="disclaimer">
   <strong>안내</strong>  이 계산기는 공개된 법령·고시를 바탕으로 한 참고용 추정치이며, 개별 사안에 대한 노무·세무 자문이 아닙니다. 계산 기준일과 요율 출처는 <a href="/rates/">2026 요율·기준표</a>에서 확인할 수 있습니다. 오류를 발견하시면 <a href="https://github.com/seungyun-shin/seungyun-shin.github.io/issues" rel="noopener">제보</a>해 주세요.
 </aside>
 <h2>함께 쓰는 계산기</h2><ul class="related"><li><a href="/annual-leave/">연차 계산기</a></li><li><a href="/social-insurance/">4대보험 계산기</a></li><li><a href="/severance-pay/">퇴직금 계산기</a></li><li><a href="/year-end-tax/">연말정산 계산기</a></li><li><a href="/maternity-leave/">출산휴가급여</a></li></ul>
-<p class="muted small">최종 수정: 2026-10-25 · 요율 점검: 2026-10-25</p>
+<p class="muted small">최종 수정: 2026-10-26 · 요율 점검: 2026-10-25</p>
 </section>
 </main>
 <footer class="site-footer">
