@@ -38,7 +38,8 @@ function render(r, v) {
       ${kpi(`미사용 ${num(r.unusedDays, 2)}일 수당`, won(r.allowanceUnused))}
       ${retire && fiscal ? kpi(`정산 부족분 ${num(r.settlementDays, 2)}일`, won(r.allowanceSettlement)) : ''}
       ${kpi('수당 합계(세전)', `<strong>${won(r.allowanceTotal)}</strong>`)}
-    </div>`;
+    </div>
+    <p class="small muted">사용촉진 여부·1년 미만 근로자·시급제로 나눠 보려면 <a href="/annual-leave-pay/">연차수당 계산기</a>를 쓰세요.</p>`;
   }
   html += basisBlock('계산 근거 펼치기', [
     `입사일 ${r.hireDate}, ${retire ? `마지막 근무일 ${r.endDate} (퇴직일 ${r.retirementDate})` : `기준일 ${r.endDate}`}`,

@@ -24,6 +24,10 @@ function render(r) {
     r.ordinaryDaily ? `1일 통상임금 = 월 통상임금 ÷ 209 × 8 = ${won2(r.ordinaryDaily)} → ${r.useOrdinary ? '평균임금보다 커서 통상임금을 적용 (근로기준법 제2조②)' : '평균임금이 더 크므로 평균임금 적용'}` : '월 통상임금을 넣으면 평균임금과 비교해 큰 금액을 적용합니다.',
     `퇴직금 = ${won2(r.appliedDaily)} × 30일 × ${num(r.serviceDays)}일 ÷ 365 = ${won(r.severance)} (원 미만 반올림, 고용노동부 계산기와 같음)`,
   ], true);
+  if (r.eligible && r.severance > 0) {
+    const q = new URLSearchParams({ pay: String(r.severance), mode: 'dates', hireDate: r.hireDate, retireDate: r.lastWorkDate });
+    html += `<p><a class="btn btn-ghost" href="/retirement-tax/?${q}">이 퇴직금의 퇴직소득세 계산 →</a></p>`;
+  }
   html += '<p class="small muted">퇴직소득세는 별도입니다. 근속연수공제·환산급여공제를 적용하므로 근로소득세보다 훨씬 낮고, IRP 계좌로 받으면 과세가 이연됩니다.</p>';
   return html;
 }
