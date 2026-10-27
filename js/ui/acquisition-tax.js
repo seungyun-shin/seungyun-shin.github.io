@@ -27,7 +27,8 @@ function render(r) {
     : '농어촌특별세: 전용 85㎡ 이하 국민주택규모라 비과세 (농어촌특별세법 제4조, 시행령 제4조⑤)');
   steps.push('세목마다 10원 미만 절사 (지방세기본법 제59조 → 국고금관리법 제47조)');
   html += basisBlock('계산 근거 펼치기', steps, true);
-  html += `<p class="small muted">이 계산은 개인의 주택 매매(유상취득) 기준이며 ${num(r.houses)}주택 · ${r.adjusted ? '조정대상지역' : '조정대상지역 외'}로 입력한 값입니다. 신고·납부 기한은 취득일부터 60일입니다(지방세법 제20조①).</p>`;
+  html += `<p class="small muted">이 계산은 개인의 주택 매매(유상취득) 기준이며 ${num(r.houses)}주택 · ${r.adjusted ? '조정대상지역' : '조정대상지역 외'}로 입력한 값입니다. 신고·납부 기한은 취득일부터 60일입니다(지방세법 제20조①).</p>
+  <p class="small muted">취득한 뒤에는 해마다 보유세를 냅니다: <a href="/property-tax/">재산세 계산기</a>(공시가격 기준) · <a href="/comprehensive-real-estate-tax/">종합부동산세 계산기</a></p>`;
   return html;
 }
 
