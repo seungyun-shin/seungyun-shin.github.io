@@ -1,6 +1,6 @@
 // 연차수당 (미사용 연차유급휴가 보상) — 근로기준법 제60조·제61조
 //   연차수당 = 미사용 연차 일수 × 1일 통상임금 (제60조⑤: 취업규칙 등에서 정하는 통상임금 또는 평균임금)
-//   1일 통상임금 = 월 통상임금 ÷ 월 소정근로시간 × 1일 소정근로시간 (연차 계산기와 같은 함수)
+//   1일 통상임금 = 월 통상임금 ÷ 월 통상임금 산정 기준시간 수(시행령 제6조②4호, 주 40시간 209시간) × 1일 소정근로시간 (연차 계산기와 같은 함수)
 //   1년 미만 근로자: 1개월 개근 시 1일 (제60조②), 최초 1년이 끝나면 소멸 (제60조⑦)
 //   사용촉진(제61조①·②)을 거쳐 사용 기간 만료로 소멸한 휴가 → 보상 의무 없음
 //   퇴직: 금품청산 14일 (제36조)
@@ -34,7 +34,7 @@ export function dailyWageOf(p) {
   const m = toNum(p.monthlyWage);
   const monthlyHours = toNum(p.monthlyHours, RATES.minWage.monthlyHours.value.fullTime);
   if (!(m > 0)) throw new Error('월 통상임금을 입력하세요.');
-  if (!(monthlyHours > 0 && monthlyHours <= 400)) throw new Error('월 소정근로시간을 확인하세요.');
+  if (!(monthlyHours > 0 && monthlyHours <= 400)) throw new Error('월 통상임금 산정 기준시간을 확인하세요.');
   return { type: 'monthly', daily: dailyOrdinaryWage(m, { monthlyHours, dailyHours }), dailyHours, monthlyHours, monthlyWage: m };
 }
 
@@ -42,7 +42,7 @@ export function dailyWageOf(p) {
  * @param {object} p
  * @param {'monthly'|'hourly'|'daily'} [p.wageType]
  * @param {number} [p.monthlyWage] 월 통상임금
- * @param {number} [p.monthlyHours=209] 월 소정근로시간
+ * @param {number} [p.monthlyHours=209] 월 통상임금 산정 기준시간 수
  * @param {number} [p.dailyHours=8] 1일 소정근로시간
  * @param {number} [p.hourlyWage] 시간급 통상임금
  * @param {number} [p.dailyWage] 1일 통상임금 직접 입력

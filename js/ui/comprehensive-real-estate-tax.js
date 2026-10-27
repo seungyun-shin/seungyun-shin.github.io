@@ -20,10 +20,12 @@ function render(r) {
   steps.push(`공시가격 합계 = ${r.prices.map(won).join(' + ')} = ${won(r.sum)} (${num(r.count)}채)`);
   steps.push(`과세표준 = (${won(r.sum)} − ${r.oneHouse ? '1세대 1주택자 공제' : '공제'} ${won(r.deduction)}) × ${p(r.fair)} = ${won(r.base)} (제8조①, 시행령 제2조의4, 1원 미만 절사)`);
   steps.push(`세율: ${r.threePlus ? '3주택 이상 (제9조①2호)' : '2주택 이하 (제9조①1호)'} → 산출세액 = ${won(r.bracketBase)} + (${won(r.base)} − ${won(r.bracketFrom)}) × ${p(r.bracketRate)} = ${won(r.calcTax)}`);
-  r.houses.forEach((h, i) => steps.push(`주택 ${i + 1} 재산세: ${won(h.price)} × ${p(h.ratio)} = 과세표준 ${won(h.propBase)} → 재산세 ${won(h.propertyTax)} / 표준세율 재산세 상당액 ${won(h.standardTax)}`));
+  r.houses.forEach((h, i) => steps.push(`주택 ${i + 1} 재산세: ${won(h.price)} × ${p(h.ratio)} = 과세표준 ${won(h.propBase)} → 재산세 ${won(h.propertyTax)} `));
   steps.push(`재산세 부과세액 합계 = ${won(r.paid)}${r.paid !== r.estPaid ? ` (입력한 고지액, 계산값 ${won(r.estPaid)})` : ' (계산값, 도시지역분 제외)'}`);
   steps.push(`분자 = 종부세 과세표준 ${won(r.base)} × 재산세 공정시장가액비율 ${p(r.propRatio)} × 0.4% = ${won(r.numerator)}`);
-  steps.push(`분모 = 주택별 표준세율 재산세 상당액 합계 = ${won(r.denominator)}`);
+  steps.push(r.count > 1
+    ? `분모 = 주택을 합산해 표준세율로 계산한 재산세 상당액: 공시가격 합계 ${won(r.sum)} × ${p(r.houses[0].ratio)} = ${won(r.denomBase)} → ${won(r.denominator)} (시행령 제4조의3①, 신고서 작성방법 ⑧)`
+    : `분모 = 표준세율 재산세 상당액: ${won(r.sum)} × ${p(r.houses[0].ratio)} = ${won(r.denomBase)} → ${won(r.denominator)} (시행령 제4조의3①, 신고서 작성방법 ⑧)`);
   steps.push(`공제할 재산세 = ${won(r.paid)} × ${won(r.numerator)} ÷ ${won(r.denominator)} = ${won(r.propCredit)} (제9조③, 시행령 제4조의3①) → ${won(r.afterProp)}`);
   if (r.oneHouse) steps.push(`1세대 1주택자 세액공제 = ${won(r.afterProp)} × (고령자 ${p(r.ageRate)} + 장기보유 ${p(r.holdRate)}${r.ageRate + r.holdRate > r.creditRate ? ` → 한도 ${p(r.creditRate)}` : ''}) = ${won(r.credit)} (제9조⑤~⑧) → ${won(r.beforeCap)}`);
   if (r.cap) {

@@ -18,7 +18,7 @@ function render(r) {
     : r.price <= 6e8 ? `취득가액 ${won(r.price)} ≤ 6억원 → 1% (제11조①8호가목)`
       : r.price > 9e8 ? `취득가액 ${won(r.price)} > 9억원 → 3% (제11조①8호다목)`
         : `(${won(r.price)} × 2 ÷ 3억원 − 3) × 1/100 = ${p(((r.price * 2) / 3e8 - 3) / 100, 6)} → 넷째 자리 반올림 ${p(r.baseRate)} (제11조①8호나목)`);
-  steps.push(`취득세 = ${won(r.price)} × ${p(r.rate)} = ${won(r.acqBefore)}${r.relief ? ` − 생애최초 감면 ${won(r.relief)} = ${won(r.acqTax)} (지방세특례제한법 제36조의3)` : ''}`);
+  steps.push(`취득세 = ${won(r.price)} × ${p(r.rate)} = ${won(r.acqBefore)}${r.relief ? ` − 생애최초 감면 ${won(r.relief)} = ${won(r.acqTax)} (지방세특례제한법 ${esc(r.reliefBasis)})` : ''}`);
   steps.push(r.heavy
     ? `지방교육세 = ${won(r.price)} × (4% − 2%) × 20% = ${won(r.eduTax)} (제151조①1호나목)`
     : `지방교육세 = ${won(r.price)} × ${p(r.baseRate)} × 50% × 20% = ${won(r.eduTax)} (제151조①1호)`);
@@ -33,10 +33,11 @@ function render(r) {
 }
 
 bindCalculator({
-  defaults: { price: '700000000', houses: '1', adjusted: false, temporary: false, lowValue: false, over85: false, firstHome: false, firstHomeSmall: false },
+  defaults: { price: '700000000', houses: '1', adjusted: false, temporary: false, lowValue: false, over85: false, firstHome: false, firstHomeSmall: false, capitalArea: false, firstHomeDepop: false },
   compute: (v) => calcAcquisitionTax(v),
   render,
   onChange: (form) => {
     document.getElementById('small-wrap').hidden = !form.querySelector('[name=firstHome]').checked;
+    document.getElementById('capital-wrap').hidden = !form.querySelector('[name=firstHomeSmall]').checked;
   },
 });

@@ -46,7 +46,8 @@ export function interestTax(interest, taxType, customRate = 0) {
     t.local = floor10(t.income * v('localIncomeTax'));
   } else if (taxType === 'preferential') {
     t.income = floor10(interest * v('preferentialTax'));
-    const reduced = interest * (v('interestIncomeTax') - v('preferentialTax'));
+    // 농어촌특별세법 제5조④: 감면세액 = 이자 × 14% − 조특법에 따라 납부하는 소득세액(10원 미만 절사 후)
+    const reduced = interest * v('interestIncomeTax') - t.income;
     t.farm = floor10(reduced * v('farmSpecialTax'));
   } else if (taxType === 'custom') {
     t.custom = floor10(interest * (customRate / 100));

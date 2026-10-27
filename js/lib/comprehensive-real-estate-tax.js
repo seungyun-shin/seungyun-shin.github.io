@@ -2,7 +2,9 @@
 //   과세표준: 종합부동산세법 제8조① — (공시가격 합계 − 1세대 1주택자 12억원 / 그 밖의 자 9억원) × 공정시장가액비율 60%(시행령 제2조의4)
 //   세율: 제9조①1호(2주택 이하)·2호(3주택 이상) 누진세율
 //   재산세 공제: 제9조③, 시행령 제4조의3① — 재산세 부과세액 합계 × (종부세 과세표준 × 재산세 공정시장가액비율 × 0.4%)
-//                ÷ (주택별 재산세 과세표준에 표준세율을 적용한 재산세 상당액 합계)  [시행규칙 서식 작성방법 산식]
+//                ÷ (주택을 합산하여 주택분 재산세 표준세율로 계산한 재산세 상당액)
+//                분모는 시행규칙 신고서 작성방법 ⑧: [재산세 과세표준(= ② 감면 후 공시가격 합계 × 재산세 공정시장가액비율) × 세율 − 누진공제액]
+//                → 공시가격 합계에 표준세율 누진표를 한 번 적용 (1주택이면 주택별 계산과 같음)
 //   1세대 1주택자 세액공제: 제9조⑤~⑨ — 고령자 20·30·40%, 장기보유 20·40·50%, 합계 80% 한도
 //   세부담상한: 제10조, 시행령 제5조 — (재산세 + 종부세)가 직전 연도 총세액상당액의 150%를 넘는 부분은 없는 것으로 봄
 //   농어촌특별세: 농어촌특별세법 제5조①8호 — 납부할 종부세액 × 20%
@@ -62,7 +64,9 @@ export function compCore({ prices, oneHouse, age, holdYears, paidPropertyTax, pr
   // 분자: 종부세 과세표준 × 재산세 공정시장가액비율 × 0.4% (1주택자는 그 주택의 비율, 다주택은 60%)
   const propRatio = oneHouse ? houses[0].ratio : fairRatio(1, false);
   const numerator = floor1(base * propRatio * v('propTaxCredit').topRate);
-  const denominator = houses.reduce((s, h) => s + h.standardTax, 0);
+  // 분모: 주택을 합산하여 표준세율로 계산한 재산세 상당액 (시행령 제4조의3①, 작성방법 ⑧ — ②는 공시가격 합계)
+  const denomBase = floor1(houses.reduce((s, h) => s + h.price * h.ratio, 0));
+  const denominator = floor1(standardTax(denomBase));
   const propCredit = denominator > 0 ? Math.min(paid, floor1((paid * numerator) / denominator)) : 0;
   const afterProp = Math.max(0, calcTax - propCredit);
 
@@ -71,7 +75,7 @@ export function compCore({ prices, oneHouse, age, holdYears, paidPropertyTax, pr
   const tax = afterProp - credit;
   return {
     sum, deduction, fair, base, threePlus, bracketRate: r.rate, bracketFrom: r.from, bracketBase: r.base, calcTax,
-    houses, estPaid, paid, propRatio, numerator, denominator, propCredit, afterProp,
+    houses, estPaid, paid, propRatio, numerator, denomBase, denominator, propCredit, afterProp,
     ageRate: cr.ageRate, holdRate: cr.holdRate, creditRate: cr.rate, credit, tax,
   };
 }

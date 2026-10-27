@@ -5,7 +5,7 @@ function render(r) {
   const t = r.tax;
   const taxLines = [];
   if (r.taxType === 'general') taxLines.push(`소득세 ${won(t.income)} (이자 × 14%, 10원 미만 절사)`, `지방소득세 ${won(t.local)} (소득세 × 10%, 10원 미만 절사)`);
-  if (r.taxType === 'preferential') taxLines.push(`소득세 ${won(t.income)} (이자 × 9%, 조세특례제한법 제89조)`, `농어촌특별세 ${won(t.farm)} (감면세액 = 이자 × 5%의 10%)`);
+  if (r.taxType === 'preferential') taxLines.push(`소득세 ${won(t.income)} (이자 × 9%, 조세특례제한법 제89조)`, `농어촌특별세 ${won(t.farm)} (감면세액 = 이자 × 14% − 낸 소득세 ${won(t.income)}의 10%, 농어촌특별세법 제5조④)`);
   if (r.taxType === 'custom') taxLines.push(`세금 ${won(t.custom)} (이자 × ${num(r.customTaxRate, 2)}%)`);
   if (r.taxType === 'exempt') taxLines.push('비과세: 세금 0원');
   let html = `<h2>계산 결과</h2><p>만기 실수령액 (${esc(r.taxName)})</p><p class="big">${won(r.maturityNet)}</p>

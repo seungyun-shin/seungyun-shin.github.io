@@ -130,6 +130,7 @@ export function calcCarTax(p) {
     };
     if (taxYear === 2027 && !userRate) warnings.push('2027년 연납 이자율은 아직 확인하지 못했습니다(확인 필요). 현행 지방세법 시행령 제125조⑥의 5%로 계산했고, 개정되면 이자율 칸에 직접 넣어 다시 계산하세요.');
   }
+  if (carTax <= v('lumpSumMax') && prepayMonth !== 6) warnings.push('연세액이 10만원 이하라 시·군·구가 6월(제1기분)에 1년 치를 한꺼번에 부과할 수 있습니다. 이때는 하반기분 세액 × 5%를 공제하므로 연납에서 \'6월\'을 고른 금액과 같습니다(지방세법 제128조④, 시행령 제125조⑥).');
   if (regYear === taxYear) warnings.push('과세연도에 새로 등록한 차는 등록일부터 일할 계산해 부과합니다(지방세법 제128조②). 이 계산은 1년 내내 소유한 경우의 금액입니다.');
   if (fuel === 'engine' && ages[1] >= v('ageRelief').startAge) {
     if (ages[0] !== ages[1]) warnings.push(`하반기에 최초 등록한 차라 상반기 차령 ${ages[0]}년, 하반기 차령 ${ages[1]}년으로 경감률이 다릅니다(지방세법 시행령 제122조②).`);

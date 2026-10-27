@@ -98,7 +98,7 @@ export function sumDays(events) {
   return Math.round(events.reduce((s, e) => s + e.days, 0) * 100) / 100;
 }
 
-/** 1일 통상임금 = 월 통상임금 ÷ 월 소정근로시간 × 1일 소정근로시간 */
+/** 1일 통상임금 = 월 통상임금 ÷ 월 통상임금 산정 기준시간 수 × 1일 소정근로시간 */
 export function dailyOrdinaryWage(monthlyOrdinaryWage, { monthlyHours = 209, dailyHours = 8 } = {}) {
   if (!(monthlyOrdinaryWage > 0)) return 0;
   return (monthlyOrdinaryWage / monthlyHours) * dailyHours;
